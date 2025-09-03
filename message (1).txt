@@ -26,6 +26,11 @@ local Tabs = {
         Title = "Visuals",
         Icon = "file"
     },
+Teleport = Window:CreateTab{
+        Title = "Teleport",
+        Icon = "House"
+    },
+
     Settings = Window:CreateTab{
         Title = "Settings",
         Icon = "settings"
@@ -574,6 +579,7 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 SaveManager:LoadAutoloadConfig()
+
 
 
 
