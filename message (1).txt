@@ -427,12 +427,18 @@ end)
 
 Options.SpeedBoost:SetValue(false)
 
-local ESP_Toggle = Tabs.Esp:CreateToggle("ESP_Toggle", {Title = "ESP Player", Default = false})
-
+Tabs.Esp:AddButton({
+        Title = "Esp Players",
+        Description = "",
+        Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/mATc4V53"))()
+end})
 
+Tabs.Esp:AddButton({
+        Title = "ESP Mob",
+        Description = "",
+        Callback = function()
 
-local MobESP = Tabs.Esp:CreateToggle("MobESP", {Title = "ESP Mob", Default = false})
 
 -- More scripts: codexxscripts
 local function applyHighlight(item)
@@ -455,7 +461,7 @@ end
 workspace.DescendantAdded:Connect(applyHighlight)
 
 -- Go to my Telegram!
-
+end})
 
 local LogESP = Tabs.Esp:CreateToggle("LogESP", {Title = "ESP Log", Default = false})
 LogESP:OnChanged(function()
@@ -568,6 +574,7 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 SaveManager:LoadAutoloadConfig()
+
 
 
 
