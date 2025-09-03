@@ -29,7 +29,7 @@ local Tabs = {
 
 Bring = Window:CreateTab{
         Title = "Bring & Teleport",
-        Icon = "Car"
+        Icon = "House"
     },
     Settings = Window:CreateTab{
         Title = "Settings",
@@ -774,6 +774,7 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 SaveManager:LoadAutoloadConfig()
+
 
 
 
