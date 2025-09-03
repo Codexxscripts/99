@@ -4,7 +4,7 @@ local SaveManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.
 local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ActualMasterOogway/Fluent-Renewed/master/Addons/InterfaceManager.luau"))()
  
 local Window = Library:CreateWindow{
-    Title = `99 Night in the Forest| {Library.Version}`,
+    Title = `99 Night in the Forest [Keyless]`,
     SubTitle = "by @Codexxscripts (Only Telegram)",
     TabWidth = 160,
     Size = UDim2.fromOffset(550, 380),
@@ -13,14 +13,14 @@ local Window = Library:CreateWindow{
     MinimizeKey = Enum.KeyCode.LeftControl
 }
 
+    Main = Window:CreateTab{
+        Title = "Main",
+        Icon = "phosphor-users-bold"
+    },
 local Tabs = {
     Esp = Window:CreateTab{
         Title = "Esp",
         Icon = "map-pin"
-    },
-    Main = Window:CreateTab{
-        Title = "Main",
-        Icon = "phosphor-users-bold"
     },
     Visual = Window:CreateTab{
         Title = "Visuals",
@@ -639,6 +639,7 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 SaveManager:LoadAutoloadConfig()
+
 
 
 
