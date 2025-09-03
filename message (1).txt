@@ -382,29 +382,30 @@ end)
 Options.InfinityJump:SetValue(false)
 local Main = Tabs.Main:AddSection("Speed")
 
-local JumpPowerSlider = Tabs.Main:CreateSlider("JumpSlider", {
-    Title = "Jump Power",
-    Description = "50",
-    Default = 50,
-    Min = 5,
-    Max = 500,
-    Rounding = 1,
-    Callback = function(val)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-    end
-})
+local Slider = Tabs.Main:AddSlider("Walk Speed", {
+        Title = "Walk Speed",
+        Description = "Change speed Player",
+        Default = 16,
+        Min = 16,
+        Max = 1000,
+        Rounding = 1,
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+        end
+    })
 
-local SpeedSlider = Tabs.Main:CreateSlider("SpeedSlider", {
-    Title = "Walk Speed",
-    Description = "16",
-    Default = 16,
-    Min = 5,
-    Max = 500,
-    Rounding = 1,
-    Callback = function(val)
-       
-    end
-})
+local Slider = Tabs.Main:AddSlider("Jump Power", {
+        Title = "Jump Power",
+        Description = "Change jump Player",
+        Default = 50,
+        Min = 50,
+        Max = 1000,
+        Rounding = 1,
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+       end
+    })
+
 local SpeedBoostToggle = Tabs.Visual:CreateToggle("SpeedBoost", {Title = "Speed Boost", Default = false})
 
 SpeedBoostToggle:OnChanged(function(Value)
@@ -638,6 +639,7 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 SaveManager:LoadAutoloadConfig()
+
 
 
 
