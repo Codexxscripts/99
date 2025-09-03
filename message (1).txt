@@ -385,9 +385,9 @@ local Speed = 50
 
 local JumpPowerSlider = Tabs.Main:CreateSlider("JumpSlider", {
     Title = "Jump Power",
-    Description = "",
+    Description = "60",
     Default = 50,
-    Min = 1,
+    Min = 5,
     Max = 500,
     Rounding = 1,
     Callback = function(val)
@@ -397,9 +397,9 @@ local JumpPowerSlider = Tabs.Main:CreateSlider("JumpSlider", {
 
 local SpeedSlider = Tabs.Main:CreateSlider("SpeedSlider", {
     Title = "Walk Speed",
-    Description = "",
-    Default = 50,
-    Min = 1,
+    Description = "16",
+    Default = 16,
+    Min = 5,
     Max = 500,
     Rounding = 1,
     Callback = function(val)
@@ -639,6 +639,7 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 SaveManager:LoadAutoloadConfig()
+
 
 
 
