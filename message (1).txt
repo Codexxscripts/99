@@ -402,7 +402,7 @@ local SpeedSlider = Tabs.Main:CreateSlider("SpeedSlider", {
     Max = 500,
     Rounding = 1,
     Callback = function(val)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+       
     end
 })
 local SpeedBoostToggle = Tabs.Visual:CreateToggle("SpeedBoost", {Title = "Speed Boost", Default = false})
@@ -638,6 +638,7 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 SaveManager:LoadAutoloadConfig()
+
 
 
 
