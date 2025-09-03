@@ -385,7 +385,7 @@ local Speed = 50
 
 local JumpPowerSlider = Tabs.Main:CreateSlider("JumpSlider", {
     Title = "Jump Power",
-    Description = "60",
+    Description = "50",
     Default = 50,
     Min = 5,
     Max = 500,
@@ -639,6 +639,7 @@ InterfaceManager:BuildInterfaceSection(Tabs.Settings)
 SaveManager:BuildConfigSection(Tabs.Settings)
 
 SaveManager:LoadAutoloadConfig()
+
 
 
 
